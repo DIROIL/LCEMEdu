@@ -2,12 +2,10 @@
     IMPORT FONTS
 -------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
-
 /*------------------------------------------------------------------
     IMPORT FILES
 -------------------------------------------------------------------*/
-
+@import url(css/fonts.googleapis.com.css);
 @import url(css/animate.css);
 @import url(css/animate.min.css);
 @import url(css/bootstrap-touch-slider.css);
@@ -2483,7 +2481,7 @@ select.mobile-device {
     font-weight: 400;
     font-size: 20px;
     text-transform: capitalize;
-    line-height: !important;
+    line-height: important;
 }
 
 .footer {
@@ -2772,7 +2770,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important
 }
 
 #preloader {
@@ -3220,7 +3218,7 @@ span.m_1 {
 }
 
 .pd{
-	padding: 0px 15px;
+	padding: 0px 10px;
 }
 
 
