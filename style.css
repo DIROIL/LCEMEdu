@@ -2455,6 +2455,10 @@ select.mobile-device {
 	margin-left: -15px;
 }
 
+#admision{
+    background: url(images/bg.png) no-repeat center center #fff;
+}
+
 /*------------------------------------------------------------------
     FOOTER
 -------------------------------------------------------------------*/
