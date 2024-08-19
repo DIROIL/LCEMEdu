@@ -60,9 +60,9 @@ $e_subject = 'Vous avez été contacté par ' . $first_name . ' ' . $last_name .
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = 'Vous avez été contacté par' $first_name . ' ' . $last_name.'.' PHP_EOL . PHP_EOL;
+$e_body = 'Vous avez été contacté par'. $first_name . ' ' . $last_name.'.' PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = 'Vous pouvez contacter le' $first_name. ' ' . $last_name ' via email ', $email 'or via phone' $phone;
+$e_reply = 'Vous pouvez contacter le '. $first_name. ' ' . $last_name. ' via email ', $email .'or via phone '. $phone;
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
