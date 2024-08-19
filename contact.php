@@ -53,16 +53,16 @@ $address = "lcemtchad@gmail.com";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'You\'ve been contacted by ' . $first_name . '.';
+$e_subject = 'Vous avez été contacté par ' . $first_name . ' ' . $last_name .'.';
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $first_name. $first_name selected = their additional message is as follows. Customer max budge is  for this project." . PHP_EOL . PHP_EOL;
+$e_body = "Vous avez été contacté par" $first_name . ' ' . $last_name."." PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $first_name via email, $email or via phone $phone";
+$e_reply = 'Vous pouvez contacter le' $first_name. ' ' . $last_name ' via email ', $email 'or via phone' $phone;
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
@@ -76,12 +76,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	// Email has sent successfully, echo a success page.
 
-	echo "<fieldset>";
-	echo "<div id='success_page'>";
-	echo "<h1>Email Sent Successfully.</h1>";
-	echo "<p>Thank you <strong>$first_name</strong>, your message has been submitted to us.</p>";
-	echo "</div>";
-	echo "</fieldset>";
+	header("location: ./index.html");
 
 } else {
 
