@@ -74,7 +74,19 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
 if(mail($address, $e_subject, $msg, $headers)) {
 
-	// Email has sent successfully, echo a success page.
+	// sending confirmation to the sender.
+	$confirmation_subject = 'Merci de nous avoir contactés!';
+    $confirmation_msg = "Cher/Chère $first_name $last_name," . PHP_EOL . PHP_EOL;
+    $confirmation_msg .= "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais." . PHP_EOL . PHP_EOL;
+    $confirmation_msg .= "Cordialement," . PHP_EOL;
+    $confirmation_msg .= "L'équipe de Lycée Collège Evangéliques les Messagers( LCEM )" . PHP_EOL;
+    $confirmation_headers = "From: $address" . PHP_EOL;
+    $confirmation_headers .= "Reply-To: $address" . PHP_EOL;
+    $confirmation_headers .= "MIME-Version: 1.0" . PHP_EOL;
+    $confirmation_headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+    $confirmation_headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
+
+    mail($email, $confirmation_subject, $confirmation_msg, $confirmation_headers);
 
 	header("location: ./index.html");
 
