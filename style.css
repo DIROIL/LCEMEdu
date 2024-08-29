@@ -14,6 +14,7 @@
 @import url(css/prettyPhoto.css);
 @import url(css/owl.carousel.css);
 @import url(css/font-awesome.min.css);
+@import url(css/responsive.css);
 
 /*------------------------------------------------------------------
     SKELETON
@@ -25,6 +26,18 @@ body {
     font-family: 'Rubik', sans-serif;
     line-height: 1.80857;
 
+}
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Default for desktop */
+}
+
+@media (max-width: 767px) {
+    body {
+        width: 109%; /* Wider for mobile */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
 }
 
 body.demos .section {
@@ -464,7 +477,6 @@ a img.aligncenter {
     HEADER
 -------------------------------------------------------------------*/
 
-
 .top-navbar .bg-light{
 	background: #4c5a7d !important;
     position: fixed;
@@ -709,32 +721,35 @@ a img.aligncenter {
 
 .box-slider{
 	height: 100%;
+    width: 100%;
 }
 
+.box-slider .carousel-control-prev {
+    border-radius: 2px;
+    background: #eea412;
+    position: absolute;
+    left: 5px; /* Closer to the left edge */
+    font-size: 38px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 50px;
+    height: 50px;
+    opacity: 1;
 
-.box-slider .carousel-control-prev{
-	border-radius: 2px;
-	background: #eea412;
-	position: absolute;
-	left: 0px;
-	font-size: 38px;
-	top: 40%;
-	width: 60px;
-	height: 60px;
-	line-height: 20px;
-	opacity: 1;
 }
-.box-slider .carousel-control-next{
-	border-radius: 2px;
-	background: #eea412;
-	position: absolute;
-	right: 0px;
-	font-size: 38px;
-	top: 40%;
-	width: 60px;
-	height: 60px;
-	line-height: 20px;
-	opacity: 1;
+
+.box-slider .carousel-control-next {
+    border-radius: 2px;
+    background: #eea412;
+    position: absolute;
+    right: 5px; /* Closer to the right edge */
+    font-size: 38px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   
 }
 
 .first-section .big-tagline a{
@@ -2445,7 +2460,7 @@ select.mobile-device {
     margin-bottom: 30px;
     border: 1px solid #ebebeb;
     box-sizing: border-box;
-    color: #bcbcbc;
+    color: #000000;
     font-size: 16px;
     outline: 0 none;
     padding: 10px 25px;
@@ -2456,13 +2471,13 @@ select.mobile-device {
 }
 
 .contact_form textarea {
-    color: #bcbcbc;
+    color: #0000;
     padding: 20px 25px !important;
     height: 160px !important;
 }
 
 .contact_form .form-control::-webkit-input-placeholder {
-    color: #bcbcbc;
+    color: #000;
 }
 
 .contact_form .form-control::-moz-placeholder {

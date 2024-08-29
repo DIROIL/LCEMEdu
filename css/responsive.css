@@ -3,7 +3,7 @@
 /****************************************** */
 
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
 	.top-navbar {
         position: fixed;
         top: 0;
@@ -105,6 +105,15 @@
 	}
 }
 @media (max-width: 767px) {
+	.top-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .top-navbar .navbar-light .navbar-nav .nav-item {
+        margin: 0px 10px; /* Slightly increased margin for better spacing */
+    }
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		padding: 0px;
 	}
@@ -233,7 +242,16 @@
 		margin-bottom: 30px;
 	}
 }
-@media only screen and (min-width: 280px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+	.top-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .top-navbar .navbar-light .navbar-nav .nav-item {
+        margin: 0px 10px; /* Slightly increased margin for better spacing */
+    }
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		padding: 0px;
 	}
@@ -261,8 +279,9 @@
 		line-height: 24px;
 	}
 	body.host_version .checkdomain-wrapper .form-control{
-		width: 83%;
+		width: 100%;
 	}
+
 	body.host_version .checkdomain-wrapper .checkbox{
 		width: 20%;
 		margin-bottom: 15px;
